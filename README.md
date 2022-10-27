@@ -15,5 +15,5 @@ To update the repository with changes from this template repo, we have to run th
 following command from the projects root (ideally from a clean working tree):
 
 ```
-cd repo-config && git pull && cd .. && git commit -am "pulled repo-config updates"
+git submodule update --remote && git commit -am "pulled repo-config updates"
 ```
