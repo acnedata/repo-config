@@ -6,7 +6,7 @@ github="https://raw.githubusercontent.com/acnedata/repo-config/main"
 
 declare -a config_files=(
     ".pre-commit-config.yaml"
-    ".github/workflows.pre-commit.yml"
+    ".github/workflows/pre-commit.yml"
 )
 
 echo "Installed:"
