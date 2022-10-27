@@ -1,15 +1,17 @@
 #bin/sh
 
+# Declare the Python version used as a requirement for the dev environment here
 PYTHON_VERSION="3.9"
 
-github="https://raw.githubusercontent.com/acnedata/repo-config/main"
-
+# Declare the files to be installed here
 declare -a config_files=(
     ".pre-commit-config.yaml"
     ".github/workflows/pre-commit.yml"
     ".devcontainer/devcontainer.json"
     ".devcontainer/Dockerfile"
 )
+
+github="https://raw.githubusercontent.com/acnedata/repo-config/main"
 
 
 mkfile () { mkdir -p "$(dirname "$1")" && cat - > $1;  }
