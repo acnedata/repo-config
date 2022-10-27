@@ -12,7 +12,7 @@ declare -a config_files=(
 )
 
 
-mkfile () { mkdir -p "$(dirname "$1")" && cat - > $1 ;  }
+mkfile () { mkdir -p "$(dirname "$1")" && cat - > $1;  }
 
 download () { curl --silent --create-dirs --location "${github}/${1}"; }
 
