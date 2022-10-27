@@ -12,7 +12,7 @@ declare -a config_files=(
 )
 
 
-mkfile () { mkdir -p "$(dirname "$1")" && touch "$1" ;  }
+mkfile () { mkdir -p "$(dirname "$1")" && cat - > $1 ;  }
 
 download () { curl --silent --create-dirs --location "${github}/${1}"; }
 
@@ -21,7 +21,7 @@ main () {
     export PYTHON_VERSION
 
     for cf in ${config_files[@]}; do
-        download $cf | envsubst | mkfile $cf
+        download $cf | envsubst '${PYTHON_VERSION}' | mkfile $cf
         echo "- ${cf}"
     done
 
