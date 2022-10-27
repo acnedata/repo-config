@@ -19,13 +19,16 @@ download () { curl --silent --create-dirs --location "${github}/${1}"; }
 main () {
     echo "Installed:"
     export PYTHON_VERSION
+    export PYTHON_VERSION_DOTLESS="${PYTHON_VERSION//.}"
+    
 
     for cf in ${config_files[@]}; do
-        download $cf | envsubst '${PYTHON_VERSION}' | mkfile $cf
+        download $cf | envsubst '${PYTHON_VERSION}, ${PYTHON_VERSION_DOTLESS}' | mkfile $cf
         echo "- ${cf}"
     done
 
     unset PYTHON_VERSION
+    unset PYTHON_VERSION_DOTLESS
 }
 
 main
