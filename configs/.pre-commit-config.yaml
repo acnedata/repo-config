@@ -41,7 +41,7 @@ repos:
             "--output-format",
             "colorized",
             "--disable",
-            "E0401, C0301",
+            "E0401, C0301, E0602",
             "--good-names-rgx",
             "df, [a-z]",
           ]
