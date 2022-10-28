@@ -15,3 +15,17 @@ curl -s https://raw.githubusercontent.com/acnedata/repo-config/main/install.sh |
 This runs the `install.sh` script in this repository, wich downloads the respective
 configuration files into the directory from which it is run. As such we are not
 updating configuration files as much as we are reinstalling them with the latest changes.
+
+
+## What's in the box?
+
+- GitHub Codespaces configuration
+  - Installing Poentry and pre-commit
+- GitHub Actions configuration
+  - Running pre-commit on push and pull request
+- pre-commit configuration
+  - pyupgrade
+  - black
+  - isort
+  - flake8
+  - pylints
