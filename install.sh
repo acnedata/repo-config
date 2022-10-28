@@ -11,7 +11,7 @@ declare -a config_files=(
     ".devcontainer/Dockerfile"
 )
 
-github="https://raw.githubusercontent.com/acnedata/repo-config/main"
+github="https://raw.githubusercontent.com/acnedata/repo-config/main/configs"
 
 
 mkfile () { mkdir -p "$(dirname "$1")" && cat - > $1;  }
