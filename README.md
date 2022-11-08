@@ -20,7 +20,7 @@ updating configuration files as much as we are reinstalling them with the latest
 ## What's in the box?
 
 - GitHub Codespaces configuration
-  - Installing Poentry and pre-commit
+  - Installing Poetry and pre-commit
 - GitHub Actions configuration
   - Running pre-commit on push and pull request
 - pre-commit configuration
